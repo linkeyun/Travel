@@ -6,7 +6,7 @@
     <ul>
       <li
         class="item"
-        v-for="item of recommendList"
+        v-for="item of list"
         :key="item.id">
         <div class="item-img-wrapper">
           <img :src="item.imgUrl" class="item-img">
@@ -23,25 +23,8 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg',
-        title: '北京温泉排行榜',
-        desc: '细数北京温泉，温暖你的冬天'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg',
-        title: '北京温泉排行榜',
-        desc: '细数北京温泉，温暖你的冬天'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/source/1510/6e/1ea71e2f04e.jpg_r_640x214_aa6f091d.jpg',
-        title: '北京温泉排行榜',
-        desc: '细数北京温泉，温暖你的冬天'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
@@ -51,7 +34,6 @@ export default {
 .weekend
   background: #eee
   .title
-    margin-top: .2rem
     line-height: .8rem
     background: #eee
     text-indent: .2rem
@@ -61,7 +43,7 @@ export default {
     .item-img-wrapper
       overflow: hidden
       height: 0
-      padding-bottom: 33.9%
+      padding-bottom: 37.09%
       .item-img
         width: 100%
     .item-info
