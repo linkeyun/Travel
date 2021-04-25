@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from './store'
+// npm install babel-polyfill --save
+// 引入babel-polyfill 解决部分机型无法使用promise问题
+import 'babel-polyfill'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
